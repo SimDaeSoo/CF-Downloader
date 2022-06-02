@@ -2,7 +2,7 @@ import 'dotenv/config';
 import AWS from 'aws-sdk';
 import fs from 'fs';
 
-async function getAllS3Object(region: string, Bucket: string, Prefix: string): Promise<AWS.S3.ObjectList> {
+async function getAllS3Objects(region: string, Bucket: string, Prefix: string): Promise<AWS.S3.ObjectList> {
   const s3 = new AWS.S3({
     region,
     apiVersion: '2006-03-01',
@@ -27,9 +27,7 @@ async function getAllS3Object(region: string, Bucket: string, Prefix: string): P
 }
 
 async function main(): Promise<void> {
-  const objects = await getAllS3Object('ap-northeast-2', 'pinkfong-super-resolution', 'outputs/');
-
-  fs.writeFileSync('./objects.json', JSON.stringify(objects, null, 2));
+  const objects = require('./objects.json');
 }
 
 main();

@@ -1,0 +1,19 @@
+{
+  "name": "CF-Downloader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SimDaeSoo/CF-Downloader.git",
+  "author": "daesoo94 <tlaeotn123@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ."
+  },
+  "dependencies": {
+    "@types/node": "^17.0.38",
+    "aws-sdk": "^2.1147.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
